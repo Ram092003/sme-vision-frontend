@@ -1,0 +1,27 @@
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial;
+}
+
+button {
+  margin: 10px 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.card {
+  padding: 15px;
+  background: #f4f6f8;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}

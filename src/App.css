@@ -1,0 +1,162 @@
+body {
+  background: #0f172a;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* CONTAINER */
+.container {
+  padding: 30px;
+  max-width: 1100px;
+  margin: auto;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* BUTTON */
+button {
+  padding: 8px 16px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  transform: scale(1.05);
+  background: #1d4ed8;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+.card {
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  font-size: 18px;
+  animation: slideUp 0.6s ease;
+}
+.green { background: #16a34a; }
+.red { background: #dc2626; }
+.blue { background: #2563eb; }
+.purple { background: #7c3aed; }
+
+/* CHATBOT (NETFLIX STYLE) */
+.netflix-chatbot {
+  margin-top: 40px;
+  background: linear-gradient(145deg, #020617, #0f172a);
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(37,99,235,0.25);
+  animation: netflixSlide 0.8s ease;
+}
+.chat-window {
+  height: 200px;
+  overflow-y: auto;
+}
+.bot-msg {
+  background: #1e293b;
+  padding: 10px;
+  margin: 6px;
+  border-radius: 12px;
+}
+.user-msg {
+  background: #2563eb;
+  padding: 10px;
+  margin: 6px;
+  border-radius: 12px;
+  text-align: right;
+}
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* PDF BUTTON */
+.pdf-btn {
+  background: #22c55e;
+  color: black;
+  margin-top: 20px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes netflixSlide {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* NETFLIX INTRO */
+.netflix-bg {
+  height: 100vh;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.netflix-single {
+  font-size: 120px;
+  font-weight: 900;
+  color: #e50914;
+  animation: zoomGlow 2s ease forwards;
+}
+
+.netflix-multi {
+  font-size: 90px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  animation: spread 1.2s ease;
+}
+.netflix-multi span {
+  color: #e50914;
+}
+
+.enter-btn {
+  margin-top: 40px;
+  padding: 14px 40px;
+  font-size: 20px;
+  background: #e50914;
+  border-radius: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes zoomGlow {
+  0% { transform: scale(0.2); opacity: 0; }
+  70% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes spread {
+  from { letter-spacing: -20px; opacity: 0; }
+  to { letter-spacing: 6px; opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgba(229,9,20,0.7); }
+  70% { box-shadow: 0 0 30px rgba(229,9,20,0.7); }
+  100% { box-shadow: 0 0 0 rgba(229,9,20,0); }
+}
+
+.analyze-animate {
+  animation: fadeIn 1s ease;
+}
+
